@@ -2,7 +2,7 @@ package agent
 
 import (
 	"time"
-    "fmt"
+
 	"github.com/influxdata/telegraf"
 	"github.com/influxdata/telegraf/metric"
 )
@@ -106,7 +106,6 @@ func (ac *accumulator) AddError(err error) {
 		return
 	}
 
-	s := fmt.Sprintf("%v", err)
 	if err.Error() == "No data to return." {
 		return
 	}
