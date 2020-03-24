@@ -2,7 +2,7 @@ package agent
 
 import (
 	"time"
-
+    "fmt"
 	"github.com/influxdata/telegraf"
 	"github.com/influxdata/telegraf/metric"
 )
