@@ -106,7 +106,8 @@ func (ac *accumulator) AddError(err error) {
 		return
 	}
 
-	if err == "No data to return." {
+	s := fmt.Sprintf("%v", err)
+	if err.Error() == "No data to return." {
 		return
 	}
 	ac.maker.Log().Errorf("Error in plugin: %+v", err)
