@@ -105,11 +105,8 @@ func (ac *accumulator) AddError(err error) {
 	if err == nil {
 		return
 	}
-
-	if err.Error() == "No data to return." {
-		return
-	}
-	ac.maker.Log().Errorf("Error in plugin: %+v", err)
+	return
+	// ac.maker.Log().Errorf("Error in plugin: %+v", err)
 }
 
 func (ac *accumulator) SetPrecision(precision time.Duration) {
